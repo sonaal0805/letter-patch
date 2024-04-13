@@ -46,7 +46,7 @@ $('.draggable').each(function(index, element){
 });
 
 
-$('.patch').click( function(e){
+$('.patch').on('click touchstart', function(e){
     const element = $(e.currentTarget);
     var transformValue = element.css("transform");
     // Extract rotation degree from matrix transform value
