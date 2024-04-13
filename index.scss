@@ -1,37 +1,46 @@
-body{
-    padding: 0;
 
-    .container{
-        // border:1px solid blue;
-        height: 90vh;
-        width: 90vw;
-        // margin: 0;
-        // max-height: 60vh;
-    
-        #luggage_cover{
-            object-fit: contain;
-            height: 100%;
-            width: 100%;
-        }
-        .patch{
-            position: absolute;
-            top: 10;
-            left: 10;
-            border-radius: 50%;
-            z-index: 1;
-            cursor: move;
+.container{
+    // border:1px solid blue;
+    height: 90vh;
+    width: 90vw;
+    // margin: 0;
+    // max-height: 60vh;
 
-            img{
-                height: 60px;
-                width: 60px;
-          
-            }
-        }
+    #luggage_cover{
+        object-fit: contain;
+        height: 100%;
+        width: 100%;
+    }
+    .patch{
+        position: absolute;
+        top: 10;
+        left: 10;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: move;
 
-        #draggableElem1{
-            top: 80;
-            left: 10;
-
+        img{
+            height: 60px;
+            width: 60px;
+        
         }
     }
+
+    #draggableElem1{
+        top: 80;
+        left: 10;
+
+    }
 }
+
+@media (max-width: 680px) {
+
+    .container{
+        height: 80vh;
+        width: 95vw;
+    }
+    
+}
+
+
+
