@@ -1,0 +1,25 @@
+body {
+  padding: 0;
+}
+body .container {
+  height: 90vh;
+  width: 90vw;
+}
+body .container #luggage_cover {
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+  width: 100%;
+}
+body .container .patch {
+  position: absolute;
+  top: 10;
+  left: 10;
+  border-radius: 50%;
+  z-index: 1;
+  cursor: move;
+}
+body .container .patch img {
+  height: 60px;
+  width: 60px;
+}/*# sourceMappingURL=index.css.map */
