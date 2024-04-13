@@ -26,18 +26,25 @@ function dragElement(element) {
         /* stop moving when mouse button is released:*/
         document.onmouseup = null;
         document.touchend = null;
+
         document.onmousemove = null;
         document.ontouchmove = null;
     }
     
     function elementDrag(e) {
-        e.preventDefault();
-        // calculate the new cursor position:
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
+        if(e.type === "touchmove"){
+            pos1 = pos3 - e.changedTouches[0].clientX;
+            pos2 = pos4 - e.changedTouches[0].clientY;
+            pos3 = e.changedTouches[0].clientX;
+            pos4 = e.changedTouches[0].clientY;
+
+        }else{
+            pos1 = pos3 - e.clientX;
+            pos2 = pos4 - e.clientY;
+            pos3 = e.clientX;
+            pos4 = e.clientY;
+            e.preventDefault();
+        }
         element.style.top = (element.offsetTop - pos2) + "px";
         element.style.left = (element.offsetLeft - pos1) + "px";
     }
